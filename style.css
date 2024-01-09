@@ -1,0 +1,29 @@
+.grid {
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 0.25fr;
+    width: 100%;
+    height: 100vh;
+  }
+#top{
+    background-color: rgba(0, 128, 0, 0.75);
+    text-align: center;
+    grid-column: span 3;
+}
+#title{
+    font-size: 50px;
+}
+#four{
+    background-color: rgba(0, 128, 0, 0.75);
+}
+#five{
+    background-color: rgba(0, 128, 0, 0.75);
+}
+#six{
+    background-color: rgba(0, 128, 0, 0.75);
+}
+#bottom{
+    background-color: rgba(165, 42, 42, 0.75);
+    grid-column: span 3;
+}
