@@ -11,18 +11,21 @@
     <div class="grid">
 		<div class="cell" id="top">
 			<h3 id = "title">Infinity Dice Game</h3>
-            <p>Your Highest Roll is: 0</p>
-            <p>Rolls: 0</p>
-            <p>Currency: 0</p>
-            <p>Average: ?</p>
-            <p>Mean: ?</p>
-            <p>Mode: ?</p>
+			<p id = "current">You did not roll yet</p>
+            <p id = "highest">Your Highest Roll is: 0</p>
+            <p id = "rolls">Rolls: 0</p>
+            <p id = "points">Points: 0</p>
+            <p id = "mean">Mean: ?</p>
+            <p id = "median">Median: ?</p>
+            <p id = "mode">Mode: ?</p>
 		</div>
 		<div class="cell" id="four">
 			<h3>funny gif</h3>
 		</div>
 		<div class="cell" id="five">
-			<h3>Dice png</h3>
+			<h3><button type="submit" id="dice" onclick=roll()>
+                <img id="img" src="dice.png"/>
+              </button></h3>
 		</div>
 		<div class="cell" id="six">
 			<h3>more funny gif</h3>
@@ -31,6 +34,6 @@
 			<h3>Upgrades</h3>
 		</div>
 
-    <script href = "code.js"></script>
+    <script src = "code.js"></script>
 </body>
 </html>

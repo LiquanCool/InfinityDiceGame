@@ -16,14 +16,18 @@
 }
 #four{
     background-color: rgba(0, 128, 0, 0.75);
+    text-align: center;
 }
 #five{
     background-color: rgba(0, 128, 0, 0.75);
+    text-align: center;
 }
 #six{
     background-color: rgba(0, 128, 0, 0.75);
+    text-align: center;
 }
 #bottom{
     background-color: rgba(165, 42, 42, 0.75);
     grid-column: span 3;
+    text-align: center;
 }
