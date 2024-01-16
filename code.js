@@ -6,10 +6,10 @@ let arr = []
 let mean = 0;
 let median = 0;
 let mode = 0;
+let luck = 1;
 function roll()
 {
-    let current  = Math.round(1/Math.random());
-    console.log(current)
+    let current  = Math.round(luck/Math.random());
     if(current>highest)
     {
         highest = current;
@@ -21,19 +21,45 @@ function roll()
     mean=total/rolls;
     median=findMedian(arr);
     modeArr=modeArray(arr);
+    mode=findModes(modeArr);
     document.getElementById('current').textContent = "You just rolled a  " + current;
     document.getElementById('highest').textContent = "Your Highest Roll is: " + highest + ". That is a one in " + highest + " chance!";
     document.getElementById('rolls').textContent = "Rolls: " + rolls;
     document.getElementById('points').textContent = "Points: " + points;
     document.getElementById('mean').textContent = "Mean: " + mean;
     document.getElementById('median').textContent = "Median: " + median;
-    console.log(arr);
+    document.getElementById('mode').textContent = "Mode: " + mode;
+}
+
+function upgrade()
+{
+    if(points>100)
+    {
+        points-=100;
+        document.getElementById('points').textContent = "Points: " + points;
+        luck = 1.1;
+        document.getElementById("upgradeButton").hidden = "hidden";
+        document.getElementById("bottom").textContent = "Upgraded!";
+    }
 }
 
 function findModes(info)
 {
-    
+    let high = 0;
+    let index = 0;
+    for (var i in info)
+    {
+        current = info[i];
+        if (current > high)
+        {
+            high = current;
+            index = i;
+        }
+    }
+    return index;
 }
+
+//goes thorugh the mode array to find the mode
 
 
 
