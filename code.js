@@ -22,6 +22,7 @@ function roll()
     median=findMedian(arr);
     modeArr=modeArray(arr);
     mode=findModes(modeArr);
+    makeTable(modeArr);
     document.getElementById('current').textContent = "You just rolled a  " + current;
     document.getElementById('highest').textContent = "Your Highest Roll is: " + highest + ". That is a one in " + highest + " chance!";
     document.getElementById('rolls').textContent = "Rolls: " + rolls;
@@ -33,13 +34,42 @@ function roll()
 
 function upgrade()
 {
-    if(points>100)
+    if(points>=100)
     {
         points-=100;
         document.getElementById('points').textContent = "Points: " + points;
         luck = 1.1;
         document.getElementById("upgradeButton").hidden = "hidden";
         document.getElementById("bottom").textContent = "Upgraded!";
+    }
+}
+
+function makeTable(arr)
+{
+    let myOldTable = document.getElementById("table");
+    myOldTable.remove();
+    const div = document.getElementById("six");
+    const myTable = document.createElement("table");
+    const myTr1 = document.createElement("tr");
+    const myTh1 = document.createElement("th");
+    const myTh2 = document.createElement("th");
+    myTable.id = "table";
+    myTh1.textContent = "Times";
+    myTh2.textContent = "Number";
+    div.appendChild(myTable);
+    myTable.appendChild(myTr1);
+    myTr1.appendChild(myTh1)
+    myTr1.appendChild(myTh2)
+    for (var i in arr)
+    {
+        const myTr2 = document.createElement("tr");
+        const myTd1 = document.createElement("td");
+        const myTd2 = document.createElement("td");
+        myTd1.textContent = arr[i];
+        myTd2.textContent = i;
+        myTable.appendChild(myTr2);
+        myTr2.appendChild(myTd1);
+        myTr2.appendChild(myTd2);
     }
 }
 

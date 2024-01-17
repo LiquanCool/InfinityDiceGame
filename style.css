@@ -13,6 +13,17 @@
 }
 #title{
     font-size: 50px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+#current
+{
+    font-size: 30px;
+}
+#highest
+{
+    
+    font-size: 20px;
 }
 #four{
     background-color: rgba(0, 128, 0, 0.75);
@@ -26,14 +37,21 @@
     background-color: rgba(0, 128, 0, 0.75);
     text-align: center;
 }
+#table
+{
+    overflow-y:scroll;
+    height:400px;
+    display: block;
+}
 #bottom{
-    background-color: rgba(165, 42, 42, 0.75);
+    background-color: rgba(165, 42, 42, 1);
     grid-column: span 3;
     line-height: 100px;
     text-align: center;
 }
 #upgradeButton{
-    background-color: rgba(165, 42, 42, 0.5);
+    background-color: rgba(165, 42, 42, 0.7);
     width: 100%;
     height: 100px;
+    color:lightskyblue
 }
